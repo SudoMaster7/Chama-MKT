@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHAMA - Marketing e Coworking | Soluções de Alto Impacto</title>
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #D30000;
+            --primary-hover: #B00000;
+            --primary-light: #FF2B2B;
+            --bg-dark: #0A0A0C;
+            --bg-card: #141419;
+            --bg-card-hover: #1E1E26;
+            --text-main: #F4F4F6;
+            --text-muted: #A0A0AB;
+            --accent-gold: #FFB800;
+            --whatsapp-green: #25D366;
+            --whatsapp-hover: #20BA5A;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --glow: 0 0 25px rgba(211, 0, 0, 0.4);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header / Navbar */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(10, 10, 12, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            color: var(--primary);
+            font-size: 2rem;
+            filter: drop-shadow(0 0 8px rgba(211,0,0,0.6));
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #FFFFFF;
+            letter-spacing: 1px;
+            line-height: 1;
+        }
+
+        .logo-subtitle {
+            font-size: 0.65rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-light);
+        }
+
+        .btn-header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-hover));
+            color: white;
+            padding: 0.6rem 1.4rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            box-shadow: var(--glow);
+            transition: all 0.3s ease;
+        }
+
+        .btn-header:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 35px rgba(211, 0, 0, 0.6);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 160px 2rem 100px;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 20%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(211,0,0,0.15) 0%, rgba(0,0,0,0) 70%);
+            z-index: -1;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(211, 0, 0, 0.12);
+            border: 1px solid rgba(211, 0, 0, 0.3);
+            color: var(--primary-light);
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            line-height: 1.15;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 span {
+            color: var(--primary-light);
+            background: linear-gradient(135deg, #FF4D4D, var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1.2rem;
+            align-items: center;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--primary-hover));
+            color: white;
+            padding: 1rem 2.2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: var(--glow);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 35px rgba(211, 0, 0, 0.7);
+        }
+
+        .btn-secondary {
+            border: 1px solid var(--border-color);
+            background: rgba(255, 255, 255, 0.03);
+            color: var(--text-main);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .hero-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 2rem;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+
+        .hero-card-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .hero-card-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(211, 0, 0, 0.15);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-light);
+            font-size: 1.5rem;
+        }
+
+        .hero-stat {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #FFF;
+        }
+
+        .hero-stat-desc {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 100px 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 2.2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            background: var(--bg-card-hover);
+            border-color: rgba(211, 0, 0, 0.4);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--primary);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .service-card:hover::before {
+            opacity: 1;
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(211, 0, 0, 0.1);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-light);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: #FFF;
+        }
+
+        .service-card ul {
+            list-style: none;
+        }
+
+        .service-card ul li {
+            color: var(--text-muted);
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.95rem;
+        }
+
+        .service-card ul li i {
+            color: var(--primary-light);
+            font-size: 0.8rem;
+        }
+
+        /* Cases & Portfolio Section */
+        .cases-section {
+            padding: 100px 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .case-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 2.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .case-card:hover {
+            border-color: rgba(211, 0, 0, 0.4);
+            transform: translateY(-5px);
+        }
+
+        .case-tag {
+            color: var(--primary-light);
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .case-card h3 {
+            font-size: 1.5rem;
+            color: #FFF;
+            margin-bottom: 1rem;
+        }
+
+        .case-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .curiosity-box {
+            background: rgba(211, 0, 0, 0.1);
+            border-left: 3px solid var(--primary-light);
+            padding: 1rem;
+            border-radius: 8px;
+            color: #FFD1D1;
+            font-size: 0.9rem;
+        }
+
+        /* Clients Section */
+        .clients-section {
+            background: rgba(20, 20, 25, 0.5);
+            border-y: 1px solid var(--border-color);
+            padding: 80px 2rem;
+        }
+
+        .clients-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .clients-tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.2rem;
+            margin-top: 2.5rem;
+        }
+
+        .client-pill {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 0.8rem 1.6rem;
+            border-radius: 50px;
+            font-weight: 600;
+            color: var(--text-main);
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .client-pill:hover {
+            border-color: var(--primary-light);
+            color: #FFF;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(211, 0, 0, 0.2);
+        }
+
+        .client-pill i {
+            color: var(--primary-light);
+        }
+
+        /* ROI Section */
+        .roi-section {
+            padding: 100px 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .roi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .roi-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .roi-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .roi-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+        }
+
+        .roi-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Testimonials / Feedbacks */
+        .testimonials {
+            padding: 100px 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .stars {
+            color: var(--accent-gold);
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .testimonial-text {
+            color: var(--text-main);
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .client-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .client-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: white;
+        }
+
+        .client-details h4 {
+            font-size: 1rem;
+            color: #FFF;
+        }
+
+        .client-details p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        /* CTA Banner */
+        .cta-banner {
+            max-width: 1200px;
+            margin: 0 auto 100px;
+            background: linear-gradient(135deg, rgba(211, 0, 0, 0.2), rgba(20, 20, 25, 0.9));
+            border: 1px solid rgba(211, 0, 0, 0.4);
+            border-radius: 28px;
+            padding: 4rem 2rem;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+        }
+
+        .cta-banner h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 1.2rem;
+        }
+
+        .cta-banner p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 650px;
+            margin: 0 auto 2.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #050507;
+            border-top: 1px solid var(--border-color);
+            padding: 60px 2rem 30px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.2rem;
+        }
+
+        .social-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-main);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--whatsapp-green);
+            color: #FFF;
+            width: 65px;
+            height: 65px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+            z-index: 9999;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            background-color: var(--whatsapp-hover);
+            transform: scale(1.1);
+            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.6);
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 18px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero {
+                grid-template-columns: 1fr;
+                padding-top: 130px;
+                text-align: center;
+            }
+            .hero p {
+                margin: 0 auto 2rem;
+            }
+            .hero-cta {
+                justify-content: center;
+            }
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            .nav-links {
+                display: none;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .cta-banner h2 {
+                font-size: 2rem;
+            }
+            .services-grid, .cases-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-fire logo-icon"></i>
+                <div class="logo-text">
+                    <span class="logo-title">CHAMA</span>
+                    <span class="logo-subtitle">Marketing & Coworking</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#cases">Cases de Sucesso</a></li>
+                <li><a href="#clientes">Clientes</a></li>
+                <li><a href="#roi">Retorno (ROI)</a></li>
+                <li><a href="#feedbacks">Depoimentos</a></li>
+            </ul>
+            <a href="https://wa.me/5521972489746?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20avalia%C3%A7%C3%A3o%20gratuita%20do%20meu%20neg%C3%B3cio." target="_blank" class="btn-header">
+                <i class="fa-brands fa-whatsapp"></i> Avaliação Gratuita
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div>
+            <div class="badge">
+                <i class="fa-solid fa-bolt"></i> Transformação Digital & Performance
+            </div>
+            <h1>Aqueça suas vendas e domine o <span>Mercado Digital</span></h1>
+            <p>Estratégias completas de Marketing, Tráfego Pago, Gestão de Redes Sociais, Materiais Gráficos e Soluções para Gastronomia e Delivery. Aceleramos marcas de alto padrão.</p>
+            <div class="hero-cta">
+                <a href="https://wa.me/5521972489746?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20solicitar%20um%20or%C3%A7amento." target="_blank" class="btn-primary">
+                    Solicitar Orçamento <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="#cases" class="btn-secondary">Ver Cases</a>
+            </div>
+        </div>
+
+        <div class="hero-card">
+            <div class="hero-card-header">
+                <div class="hero-card-icon">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <div>
+                    <h3 style="color:#FFF; font-size:1.1rem;">Avaliação Gratuita</h3>
+                    <p style="color:var(--text-muted); font-size:0.85rem;">Análise de perfil e presença online</p>
+                </div>
+            </div>
+            <div style="margin-bottom: 1.5rem;">
+                <div class="hero-stat">+14 Marcas</div>
+                <div class="hero-stat-desc">Grandes empresas da gastronomia e do varejo aceleradas pela Chama Mkt.</div>
+            </div>
+            <a href="https://wa.me/5521972489746?text=Quero%20agendar%20minha%20avalia%C3%A7%C3%A3o%20gratuita!" target="_blank" style="display:block; width:100%; text-align:center; background: rgba(255,255,255,0.05); color: #FFF; padding: 12px; border-radius: 12px; text-decoration: none; font-weight: 600; border: 1px solid var(--border-color); transition: all 0.3s ease;">
+                <i class="fa-brands fa-whatsapp" style="color:var(--whatsapp-green);"></i> Agendar Análise sem Custo
+            </a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="servicos">
+        <div class="section-header">
+            <div class="badge"><i class="fa-solid fa-list-check"></i> Soluções 360°</div>
+            <h2 class="section-title">Nossos Serviços</h2>
+            <p class="section-subtitle">Tudo o que sua empresa precisa para se destacar no ambiente físico e digital.</p>
+        </div>
+
+        <div class="services-grid">
+            <!-- Presença Digital -->
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-globe"></i></div>
+                <h3>Presença Digital</h3>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> Adequação e otimização de perfil</li>
+                    <li><i class="fa-solid fa-check"></i> Cadastro em plataformas de delivery (iFood, 99Food e outras)</li>
+                    <li><i class="fa-solid fa-check"></i> Otimização para busca local (Google Meu Negócio)</li>
+                </ul>
+            </div>
+
+            <!-- Social Media -->
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-hashtag"></i></div>
+                <h3>Social Media</h3>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> Gestão completa das redes sociais</li>
+                    <li><i class="fa-solid fa-check"></i> Cronograma estratégico de postagens</li>
+                    <li><i class="fa-solid fa-check"></i> Serviço de atendimento ao cliente (SAC)</li>
+                    <li><i class="fa-solid fa-check"></i> Planejamento contínuo de Marketing</li>
+                    <li><i class="fa-solid fa-check"></i> Parcerias comerciais e com influencers</li>
+                    <li><i class="fa-solid fa-check"></i> Análise de perfil e métricas de desempenho</li>
+                </ul>
+            </div>
+
+            <!-- Conteúdo -->
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-photo-film"></i></div>
+                <h3>Conteúdo & Produção</h3>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> Captação profissional de fotos e vídeos</li>
+                    <li><i class="fa-solid fa-check"></i> Edição avançada e tratamento de imagens</li>
+                    <li><i class="fa-solid fa-check"></i> Adaptação para diferentes formatos (Feed, Reels, Stories)</li>
+                </ul>
+            </div>
+
+            <!-- Design -->
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-pen-nib"></i></div>
+                <h3>Design & Materiais Gráficos</h3>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> Peças exclusivas para redes sociais</li>
+                    <li><i class="fa-solid fa-check"></i> Criação de materiais gráficos impressos e digitais</li>
+                    <li><i class="fa-solid fa-check"></i> Comunicação visual de marca e cardápios</li>
+                </ul>
+            </div>
+
+            <!-- Tráfego Pago -->
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-rectangle-ad"></i></div>
+                <h3>Tráfego Pago</h3>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> Planejamento e segmentação de campanhas</li>
+                    <li><i class="fa-solid fa-check"></i> Criação e monitoramento de anúncios no Facebook, Instagram e Google</li>
+                    <li><i class="fa-solid fa-check"></i> Relatórios transparentes de resultados</li>
+                </ul>
+            </div>
+
+            <!-- Coworking -->
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-building-user"></i></div>
+                <h3>Espaço & Coworking</h3>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> Estrutura pronta para reuniões e gravações</li>
+                    <li><i class="fa-solid fa-check"></i> Ambiente profissional para networking e eventos</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cases Section -->
+    <section class="cases-section" id="cases">
+        <div class="section-header">
+            <div class="badge"><i class="fa-solid fa-trophy"></i> Resultados Reais</div>
+            <h2 class="section-title">Cases de Sucesso</h2>
+            <p class="section-subtitle">Conheça algumas marcas que aceleraram seu crescimento com o nosso ecossistema.</p>
+        </div>
+
+        <div class="cases-grid">
+            <!-- Case Fantástico -->
+            <div class="case-card">
+                <div class="case-tag">Identidade Visual & Lançamento</div>
+                <h3>Restaurante Fantástico (@fantasticorestaurante)</h3>
+                <p>Desenvolvimento da identidade visual completa no lançamento da marca, GRS nos 2 primeiros anos, campanhas publicitárias diversas e recordes sucessivos de métricas.</p>
+                <div class="curiosity-box">
+                    <strong><i class="fa-solid fa-fire"></i> Curiosidade:</strong> Um dos maiores crescimentos orgânicos do Brasil no primeiro trimestre de lançamento.
+                </div>
+            </div>
+
+            <!-- Case Temperô -->
+            <div class="case-card">
+                <div class="case-tag">Campanhas & Gestão Mobile</div>
+                <h3>Temperô Gourmet (@temperogourmetrj)</h3>
+                <p>Criação de campanhas publicitárias estratégicas de alta conversão e GRS específico direcionado para o público carioca.</p>
+                <div class="curiosity-box">
+                    <strong><i class="fa-solid fa-mobile-screen"></i> Curiosidade:</strong> Uma das melhores sessões mobile e experiência do usuário já desenvolvidas.
+                </div>
+            </div>
+
+            <!-- Case Materiais Gráficos -->
+            <div class="case-card">
+                <div class="case-tag">Materiais Gráficos & Branding</div>
+                <h3>Grandes Redes de Gastronomia</h3>
+                <p>Desenvolvimento e produção de materiais gráficos de alto impacto para grandes franqueadoras e redes nacionais.</p>
+                <div class="curiosity-box">
+                    <strong><i class="fa-solid fa-utensils"></i> Marcas Atendidas:</strong> T.T. Burger, Billy The Grill, Vizinhando, HNT (Hot N' Tender) e Rei do Mate.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section class="clients-section" id="clientes">
+        <div class="clients-container">
+            <div class="badge"><i class="fa-solid fa-handshake"></i> Portfólio de Marcas</div>
+            <h2 class="section-title" style="margin-top: 0.5rem;">+14 Marcas Fazendo Parte Desse Grande Time</h2>
+            <p class="section-subtitle">Confiança consolidada entre os principais estabelecimentos da gastronomia e entretenimento.</p>
+
+            <div class="clients-tags">
+                <div class="client-pill"><i class="fa-solid fa-drumstick-bite"></i> Norte Grill Churrascaria</div>
+                <div class="client-pill"><i class="fa-solid fa-star"></i> Sheriff Steakhouse Roadhouse</div>
+                <div class="client-pill"><i class="fa-solid fa-fish"></i> O Peixeiro Frutos do Mar</div>
+                <div class="client-pill"><i class="fa-solid fa-glass-cheers"></i> Da Pedra Bar & Restaurante</div>
+                <div class="client-pill"><i class="fa-solid fa-pizza-slice"></i> Diparmo</div>
+                <div class="client-pill"><i class="fa-solid fa-fire-flame-curved"></i> Fontana Steakhouse & Pizzaria</div>
+                <div class="client-pill"><i class="fa-solid fa-crown"></i> Conde Gourmet</div>
+                <div class="client-pill"><i class="fa-solid fa-cow"></i> Meat Hunter Carnes Nobres</div>
+                <div class="client-pill"><i class="fa-solid fa-store"></i> Empório Gourmet</div>
+                <div class="client-pill"><i class="fa-solid fa-burger"></i> T.T. Burger</div>
+                <div class="client-pill"><i class="fa-solid fa-utensils"></i> Billy The Grill</div>
+                <div class="client-pill"><i class="fa-solid fa-beer-mug-empty"></i> Vizinhando Espeteria</div>
+                <div class="client-pill"><i class="fa-solid fa-drumstick-bite"></i> HNT Hot N' Tender</div>
+                <div class="client-pill"><i class="fa-solid fa-mug-hot"></i> Rei do Mate</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI Section -->
+    <section class="roi-section" id="roi">
+        <div class="roi-container">
+            <div class="section-header">
+                <div class="badge"><i class="fa-solid fa-chart-pie"></i> Retorno Sobre Investimento</div>
+                <h2 class="section-title">Por que investir na Chama Mkt?</h2>
+                <p class="section-subtitle">Marketing não é um custo, é o motor de vendas do seu negócio. Veja o impacto direto nos seus resultados.</p>
+            </div>
+
+            <div class="roi-grid">
+                <div class="roi-card">
+                    <div class="roi-number">5x a 10x</div>
+                    <div class="roi-title">Mais Visibilidade</div>
+                    <div class="roi-desc">Campanhas direcionadas ao público exato que está pronto para comprar de você.</div>
+                </div>
+                <div class="roi-card">
+                    <div class="roi-number">+40%</div>
+                    <div class="roi-title">Conversão no Delivery</div>
+                    <div class="roi-desc">Otimização completa do perfil em plataformas como iFood e 99Food.</div>
+                </div>
+                <div class="roi-card">
+                    <div class="roi-number">100%</div>
+                    <div class="roi-title">Profissionalismo</div>
+                    <div class="roi-desc">Imagens, vídeos e artes de alta qualidade que geram autoridade e confiança imediata.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedbacks Section -->
+    <section class="testimonials" id="feedbacks">
+        <div class="section-header">
+            <div class="badge"><i class="fa-solid fa-comments"></i> Prova Social</div>
+            <h2 class="section-title">O que dizem nossos clientes</h2>
+            <p class="section-subtitle">A satisfação de quem transformou sua marca com a Chama Mkt.</p>
+        </div>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-text">"A criação da nossa identidade visual de lançamento e as campanhas orgânicas dos 2 primeiros anos bateram recordes de métricas nacionais no primeiro trimestre."</p>
+                <div class="client-info">
+                    <div class="client-avatar">RF</div>
+                    <div class="client-details">
+                        <h4>Restaurante Fantástico</h4>
+                        <p>@fantasticorestaurante</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-text">"A experiência mobile criada para a nossa marca e o gerenciamento de campanhas regionais aumentaram vertiginosamente nossos pedidos no RJ."</p>
+                <div class="client-info">
+                    <div class="client-avatar">TG</div>
+                    <div class="client-details">
+                        <h4>Temperô Gourmet</h4>
+                        <p>@temperogourmetrj</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-text">"Os materiais gráficos e o alinhamento de branding impecável deram o padrão visual ideal que a nossa franquia necessitava nas campanhas físicas e digitais."</p>
+                <div class="client-info">
+                    <div class="client-avatar">SH</div>
+                    <div class="client-details">
+                        <h4>Sheriff Steakhouse</h4>
+                        <p>Cliente de Materiais & Branding</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Banner -->
+    <div class="cta-banner">
+        <h2>Pronto para acender as vendas do seu negócio?</h2>
+        <p>Faça uma avaliação gratuita da sua presença digital com a nossa equipe especializada e receba um plano de ação sob medida.</p>
+        <a href="https://wa.me/5521972489746?text=Ol%C3%A1!%20Quero%20fazer%20uma%20avalia%C3%A7%C3%A3o%20gratuita%20e%20solicitar%20um%20or%C3%A7amento." target="_blank" class="btn-primary" style="font-size:1.1rem; padding: 1.2rem 2.5rem;">
+            <i class="fa-brands fa-whatsapp"></i> Falar com um Especialista Agora
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-fire logo-icon"></i>
+                <div class="logo-text">
+                    <span class="logo-title">CHAMA</span>
+                    <span class="logo-subtitle">Marketing e Coworking</span>
+                </div>
+            </a>
+
+            <div class="social-links">
+                <a href="https://instagram.com/chama.mkt" target="_blank" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/5521972489746" target="_blank" class="social-icon"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 Chama Marketing e Coworking. Todos os direitos reservados. | Whatsapp: (21) 97248-9746
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5521972489746?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento." class="whatsapp-float" target="_blank" title="Fale conosco no WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>
