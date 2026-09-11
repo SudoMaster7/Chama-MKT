@@ -3,733 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CHAMA - Marketing e Coworking | Soluções de Alto Impacto</title>
+    <title>CHAMA Marketing | Soluções de Alto Impacto em Marketing Digital</title>
+    <meta name="description" content="Marketing de performance, tráfego pago, social media, sites e automação/chatbot. A Chama Mkt acelera marcas de gastronomia, varejo e outros segmentos com estratégias de alto impacto.">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="CHAMA Marketing | Soluções de Alto Impacto em Marketing Digital">
+    <meta property="og:description" content="Marketing de performance, tráfego pago, social media, sites e automação/chatbot. Aceleramos marcas de alto padrão.">
+    <meta property="og:image" content="favicon.svg">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="CHAMA Marketing | Soluções de Alto Impacto em Marketing Digital">
+    <meta name="twitter:description" content="Marketing de performance, tráfego pago, social media, sites e automação/chatbot. Aceleramos marcas de alto padrão.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
     <!-- Google Fonts & Font Awesome Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Chama Marketing",
+        "url": "https://chamamkt.com.br",
+        "logo": "favicon.svg",
+        "telephone": "+5521984137342",
+        "sameAs": [
+            "https://instagram.com/chama.mkt"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+5521984137342",
+            "contactType": "customer service",
+            "areaServed": "BR",
+            "availableLanguage": "Portuguese"
+        }
+    }
+    </script>
 
-    <style>
-        :root {
-            --primary: #D30000;
-            --primary-hover: #B00000;
-            --primary-light: #FF2B2B;
-            --bg-dark: #0A0A0C;
-            --bg-card: #141419;
-            --bg-card-hover: #1E1E26;
-            --text-main: #F4F4F6;
-            --text-muted: #A0A0AB;
-            --accent-gold: #FFB800;
-            --whatsapp-green: #25D366;
-            --whatsapp-hover: #20BA5A;
-            --border-color: rgba(255, 255, 255, 0.08);
-            --glow: 0 0 25px rgba(211, 0, 0, 0.4);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background-color: var(--bg-dark);
-            color: var(--text-main);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* Header / Navbar */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            background: rgba(10, 10, 12, 0.85);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border-color);
-            transition: all 0.3s ease;
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.2rem 2rem;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-        }
-
-        .logo-icon {
-            color: var(--primary);
-            font-size: 2rem;
-            filter: drop-shadow(0 0 8px rgba(211,0,0,0.6));
-        }
-
-        .logo-text {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .logo-title {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: #FFFFFF;
-            letter-spacing: 1px;
-            line-height: 1;
-        }
-
-        .logo-subtitle {
-            font-size: 0.65rem;
-            color: var(--primary);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 600;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--text-main);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary-light);
-        }
-
-        .btn-header {
-            background: linear-gradient(135deg, var(--primary), var(--primary-hover));
-            color: white;
-            padding: 0.6rem 1.4rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            box-shadow: var(--glow);
-            transition: all 0.3s ease;
-        }
-
-        .btn-header:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 0 35px rgba(211, 0, 0, 0.6);
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 160px 2rem 100px;
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 4rem;
-            align-items: center;
-            position: relative;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 20%;
-            left: -10%;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(211,0,0,0.15) 0%, rgba(0,0,0,0) 70%);
-            z-index: -1;
-        }
-
-        .badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(211, 0, 0, 0.12);
-            border: 1px solid rgba(211, 0, 0, 0.3);
-            color: var(--primary-light);
-            padding: 6px 16px;
-            border-radius: 30px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            line-height: 1.15;
-            font-weight: 800;
-            margin-bottom: 1.5rem;
-        }
-
-        .hero h1 span {
-            color: var(--primary-light);
-            background: linear-gradient(135deg, #FF4D4D, var(--primary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero p {
-            font-size: 1.15rem;
-            color: var(--text-muted);
-            margin-bottom: 2.5rem;
-            max-width: 600px;
-        }
-
-        .hero-cta {
-            display: flex;
-            gap: 1.2rem;
-            align-items: center;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--primary), var(--primary-hover));
-            color: white;
-            padding: 1rem 2.2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            box-shadow: var(--glow);
-            transition: all 0.3s ease;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 0 35px rgba(211, 0, 0, 0.7);
-        }
-
-        .btn-secondary {
-            border: 1px solid var(--border-color);
-            background: rgba(255, 255, 255, 0.03);
-            color: var(--text-main);
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.08);
-            border-color: rgba(255, 255, 255, 0.2);
-        }
-
-        .hero-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 24px;
-            padding: 2rem;
-            position: relative;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-        }
-
-        .hero-card-header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 1.5rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .hero-card-icon {
-            width: 50px;
-            height: 50px;
-            background: rgba(211, 0, 0, 0.15);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary-light);
-            font-size: 1.5rem;
-        }
-
-        .hero-stat {
-            font-size: 2.2rem;
-            font-weight: 800;
-            color: #FFF;
-        }
-
-        .hero-stat-desc {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-
-        /* Services Section */
-        .services {
-            padding: 100px 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-        }
-
-        .section-subtitle {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
-        .service-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
-            padding: 2.2rem;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-card:hover {
-            transform: translateY(-8px);
-            background: var(--bg-card-hover);
-            border-color: rgba(211, 0, 0, 0.4);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 4px;
-            height: 100%;
-            background: var(--primary);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .service-card:hover::before {
-            opacity: 1;
-        }
-
-        .service-icon {
-            width: 60px;
-            height: 60px;
-            background: rgba(211, 0, 0, 0.1);
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary-light);
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .service-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
-            color: #FFF;
-        }
-
-        .service-card ul {
-            list-style: none;
-        }
-
-        .service-card ul li {
-            color: var(--text-muted);
-            margin-bottom: 0.8rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 0.95rem;
-        }
-
-        .service-card ul li i {
-            color: var(--primary-light);
-            font-size: 0.8rem;
-        }
-
-        /* Cases & Portfolio Section */
-        .cases-section {
-            padding: 100px 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .cases-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
-        .case-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
-            padding: 2.2rem;
-            transition: all 0.3s ease;
-        }
-
-        .case-card:hover {
-            border-color: rgba(211, 0, 0, 0.4);
-            transform: translateY(-5px);
-        }
-
-        .case-tag {
-            color: var(--primary-light);
-            font-size: 0.85rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            margin-bottom: 0.5rem;
-        }
-
-        .case-card h3 {
-            font-size: 1.5rem;
-            color: #FFF;
-            margin-bottom: 1rem;
-        }
-
-        .case-card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 1.2rem;
-        }
-
-        .curiosity-box {
-            background: rgba(211, 0, 0, 0.1);
-            border-left: 3px solid var(--primary-light);
-            padding: 1rem;
-            border-radius: 8px;
-            color: #FFD1D1;
-            font-size: 0.9rem;
-        }
-
-        /* Clients Section */
-        .clients-section {
-            background: rgba(20, 20, 25, 0.5);
-            border-y: 1px solid var(--border-color);
-            padding: 80px 2rem;
-        }
-
-        .clients-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .clients-tags {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1.2rem;
-            margin-top: 2.5rem;
-        }
-
-        .client-pill {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            padding: 0.8rem 1.6rem;
-            border-radius: 50px;
-            font-weight: 600;
-            color: var(--text-main);
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .client-pill:hover {
-            border-color: var(--primary-light);
-            color: #FFF;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(211, 0, 0, 0.2);
-        }
-
-        .client-pill i {
-            color: var(--primary-light);
-        }
-
-        /* ROI Section */
-        .roi-section {
-            padding: 100px 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .roi-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .roi-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
-            padding: 2rem;
-            text-align: center;
-        }
-
-        .roi-number {
-            font-size: 3rem;
-            font-weight: 800;
-            color: var(--primary-light);
-            margin-bottom: 0.5rem;
-        }
-
-        .roi-title {
-            font-size: 1.2rem;
-            font-weight: 700;
-            margin-bottom: 0.8rem;
-        }
-
-        .roi-desc {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-
-        /* Testimonials / Feedbacks */
-        .testimonials {
-            padding: 100px 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-        }
-
-        .testimonial-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .stars {
-            color: var(--accent-gold);
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
-        }
-
-        .testimonial-text {
-            color: var(--text-main);
-            font-style: italic;
-            margin-bottom: 1.5rem;
-            font-size: 0.95rem;
-        }
-
-        .client-info {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .client-avatar {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            background: var(--primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            color: white;
-        }
-
-        .client-details h4 {
-            font-size: 1rem;
-            color: #FFF;
-        }
-
-        .client-details p {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-        }
-
-        /* CTA Banner */
-        .cta-banner {
-            max-width: 1200px;
-            margin: 0 auto 100px;
-            background: linear-gradient(135deg, rgba(211, 0, 0, 0.2), rgba(20, 20, 25, 0.9));
-            border: 1px solid rgba(211, 0, 0, 0.4);
-            border-radius: 28px;
-            padding: 4rem 2rem;
-            text-align: center;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
-        }
-
-        .cta-banner h2 {
-            font-size: 2.8rem;
-            font-weight: 800;
-            margin-bottom: 1.2rem;
-        }
-
-        .cta-banner p {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-            max-width: 650px;
-            margin: 0 auto 2.5rem;
-        }
-
-        /* Footer */
-        footer {
-            background: #050507;
-            border-top: 1px solid var(--border-color);
-            padding: 60px 2rem 30px;
-        }
-
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 2rem;
-            padding-bottom: 30px;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1.2rem;
-        }
-
-        .social-icon {
-            width: 42px;
-            height: 42px;
-            border-radius: 50%;
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-main);
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .social-icon:hover {
-            background: var(--primary);
-            color: white;
-            transform: translateY(-3px);
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 30px;
-            color: var(--text-muted);
-            font-size: 0.85rem;
-        }
-
-        /* Floating WhatsApp Button */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background-color: var(--whatsapp-green);
-            color: #FFF;
-            width: 65px;
-            height: 65px;
-            border-radius: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 32px;
-            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
-            z-index: 9999;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            animation: pulse 2s infinite;
-        }
-
-        .whatsapp-float:hover {
-            background-color: var(--whatsapp-hover);
-            transform: scale(1.1);
-            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.6);
-        }
-
-        @keyframes pulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-            }
-            70% {
-                box-shadow: 0 0 0 18px rgba(37, 211, 102, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-            }
-        }
-
-        /* Responsive */
-        @media (max-width: 992px) {
-            .hero {
-                grid-template-columns: 1fr;
-                padding-top: 130px;
-                text-align: center;
-            }
-            .hero p {
-                margin: 0 auto 2rem;
-            }
-            .hero-cta {
-                justify-content: center;
-            }
-            .hero h1 {
-                font-size: 2.8rem;
-            }
-            .nav-links {
-                display: none;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            .cta-banner h2 {
-                font-size: 2rem;
-            }
-            .services-grid, .cases-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
 </head>
 <body>
+
+    <a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
+
+    <!-- Mobile Menu Overlay -->
+    <ul id="mobile-menu" class="mobile-menu" hidden>
+        <button id="mobile-menu-close" class="mobile-menu-close" aria-label="Fechar menu">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#cases">Cases de Sucesso</a></li>
+        <li><a href="#clientes">Clientes</a></li>
+        <li><a href="#pacotes">Pacotes</a></li>
+        <li><a href="#feedbacks">Depoimentos</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li>
+            <a href="#" data-wa-msg="Olá! Gostaria de fazer uma avaliação gratuita do meu negócio." target="_blank" style="color: var(--primary-light);">
+                <i class="fa-brands fa-whatsapp"></i> Avaliação Gratuita
+            </a>
+        </li>
+    </ul>
 
     <!-- Header / Navbar -->
     <header>
@@ -738,32 +78,36 @@
                 <i class="fa-solid fa-fire logo-icon"></i>
                 <div class="logo-text">
                     <span class="logo-title">CHAMA</span>
-                    <span class="logo-subtitle">Marketing & Coworking</span>
+                    <span class="logo-subtitle">Marketing Digital</span>
                 </div>
             </a>
             <ul class="nav-links">
                 <li><a href="#servicos">Serviços</a></li>
                 <li><a href="#cases">Cases de Sucesso</a></li>
                 <li><a href="#clientes">Clientes</a></li>
-                <li><a href="#roi">Retorno (ROI)</a></li>
+                <li><a href="#pacotes">Pacotes</a></li>
                 <li><a href="#feedbacks">Depoimentos</a></li>
+                <li><a href="#faq">FAQ</a></li>
             </ul>
-            <a href="https://wa.me/5521984137342?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20avalia%C3%A7%C3%A3o%20gratuita%20do%20meu%20neg%C3%B3cio." target="_blank" class="btn-header">
+            <a href="#" data-wa-msg="Olá! Gostaria de fazer uma avaliação gratuita do meu negócio." target="_blank" class="btn-header">
                 <i class="fa-brands fa-whatsapp"></i> Avaliação Gratuita
             </a>
+            <button id="hamburger" class="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="conteudo">
         <div>
             <div class="badge">
                 <i class="fa-solid fa-bolt"></i> Transformação Digital & Performance
             </div>
             <h1>Aqueça suas vendas e domine o <span>Mercado Digital</span></h1>
-            <p>Estratégias completas de Marketing, Tráfego Pago, Gestão de Redes Sociais, Materiais Gráficos e Soluções para Gastronomia e Delivery. Aceleramos marcas de alto padrão.</p>
+            <p>Estratégias completas de Marketing, Tráfego Pago, Redes Sociais, Sites, Automação/Chatbot e Materiais Gráficos. Acelerando marcas de alto padrão.</p>
             <div class="hero-cta">
-                <a href="https://wa.me/5521984137342?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20solicitar%20um%20or%C3%A7amento." target="_blank" class="btn-primary">
+                <a href="#" data-wa-msg="Olá! Vim pelo site e quero solicitar um orçamento." target="_blank" class="btn-primary">
                     Solicitar Orçamento <i class="fa-solid fa-arrow-right"></i>
                 </a>
                 <a href="#cases" class="btn-secondary">Ver Cases</a>
@@ -784,9 +128,38 @@
                 <div class="hero-stat">+14 Marcas</div>
                 <div class="hero-stat-desc">Grandes empresas da gastronomia e do varejo aceleradas pela Chama Mkt.</div>
             </div>
-            <a href="https://wa.me/5521984137342?text=Quero%20agendar%20minha%20avalia%C3%A7%C3%A3o%20gratuita!" target="_blank" style="display:block; width:100%; text-align:center; background: rgba(255,255,255,0.05); color: #FFF; padding: 12px; border-radius: 12px; text-decoration: none; font-weight: 600; border: 1px solid var(--border-color); transition: all 0.3s ease;">
+            <a href="#" data-wa-msg="Quero agendar minha avaliação gratuita!" target="_blank" style="display:block; width:100%; text-align:center; background: rgba(255,255,255,0.05); color: #FFF; padding: 12px; border-radius: 12px; text-decoration: none; font-weight: 600; border: 1px solid var(--border-color); transition: all 0.3s ease;">
                 <i class="fa-brands fa-whatsapp" style="color:var(--whatsapp-green);"></i> Agendar Análise sem Custo
             </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="sobre">
+        <div class="about-grid">
+            <div>
+                <div class="badge"><i class="fa-solid fa-fire"></i> Quem Somos</div>
+                <h2 class="section-title" style="margin-bottom:1rem;">Um ecossistema completo para acender seu negócio</h2>
+                <p style="color:var(--text-muted); font-size:1.05rem; margin-bottom:1.5rem;">A Chama Mkt une estratégia, criação e performance em um só lugar. Cuidamos da presença digital, das campanhas e dos materiais da sua marca para que você foque no que faz de melhor, enquanto nós cuidamos do crescimento.</p>
+                <p style="color:var(--text-muted); font-size:1.05rem;">Atendemos negócios de diversos segmentos de gastronomia e delivery a estética e entretenimento, sempre com decisões guiadas por dados e resultado real.</p>
+            </div>
+            <div class="about-pillars">
+                <div class="about-pillar">
+                    <i class="fa-solid fa-bullseye"></i>
+                    <h4>Estratégia</h4>
+                    <p>Planejamento sob medida para o objetivo do seu negócio.</p>
+                </div>
+                <div class="about-pillar">
+                    <i class="fa-solid fa-palette"></i>
+                    <h4>Execução</h4>
+                    <p>Conteúdo, design e campanhas com identidade de alto padrão.</p>
+                </div>
+                <div class="about-pillar">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h4>Resultado</h4>
+                    <p>Métricas acompanhadas de perto e relatórios transparentes.</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -857,14 +230,28 @@
                 </ul>
             </div>
 
-            <!-- Coworking -->
+            <!-- Site -->
             <div class="service-card">
-                <div class="service-icon"><i class="fa-solid fa-building-user"></i></div>
-                <h3>Espaço & Coworking</h3>
+                <div class="service-icon"><i class="fa-solid fa-window-restore"></i></div>
+                <h3>Site</h3>
                 <ul>
-                    <li><i class="fa-solid fa-check"></i> Estrutura pronta para reuniões e gravações</li>
-                    <li><i class="fa-solid fa-check"></i> Ambiente profissional para networking e eventos</li>
+                    <li><i class="fa-solid fa-check"></i> Páginas de alta conversão para campanhas e lançamentos</li>
+                    <li><i class="fa-solid fa-check"></i> Design responsivo otimizado para performance</li>
+                    <li><i class="fa-solid fa-check"></i> Integração com formulários e captação de leads</li>
                 </ul>
+                <a href="#" data-wa-msg="Olá! Vi o site e quero um site para o meu negócio." target="_blank" class="service-cta">Quero um site assim <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Automações & Chatbot -->
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-robot"></i></div>
+                <h3>Automações & Chatbot</h3>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> Chatbots inteligentes para atendimento no WhatsApp</li>
+                    <li><i class="fa-solid fa-check"></i> Automação de agendamentos, pedidos e vendas</li>
+                    <li><i class="fa-solid fa-check"></i> Integração com CRM e fluxos de atendimento 24h</li>
+                </ul>
+                <a href="#" data-wa-msg="Olá! Vi o site e quero automatizar o atendimento do meu negócio." target="_blank" class="service-cta">Quero automatizar meu atendimento <i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
     </section>
@@ -905,6 +292,26 @@
                 <p>Desenvolvimento e produção de materiais gráficos de alto impacto para grandes franqueadoras e redes nacionais.</p>
                 <div class="curiosity-box">
                     <strong><i class="fa-solid fa-utensils"></i> Marcas Atendidas:</strong> T.T. Burger, Billy The Grill, Vizinhando, HNT (Hot N' Tender) e Rei do Mate.
+                </div>
+            </div>
+
+            <!-- Case Flor da Pele -->
+            <div class="case-card">
+                <div class="case-tag">Tráfego Pago & Aquisição de Leads</div>
+                <h3>Flor da Pele (Spa & Estética)</h3>
+                <p>Estruturação de campanhas de tráfego pago do zero: em 50 dias, R$1.018,16 investidos geraram 249 conversas no WhatsApp, a um custo médio de R$3,09 por conversa.</p>
+                <div class="curiosity-box">
+                    <strong><i class="fa-solid fa-arrow-trend-down"></i> Curiosidade:</strong> Antes da gestão da Chama, o custo por conversa variava entre R$6,35 e R$8,41 uma queda expressiva com a nova estratégia.
+                </div>
+            </div>
+
+            <!-- Case Carlito Botecaria -->
+            <div class="case-card">
+                <div class="case-tag">Diagnóstico & Segmentação</div>
+                <h3>Carlito Botecaria (Bar em SP)</h3>
+                <p>Diagnóstico identificou que 32% do alcance das campanhas anteriores estava fora de São Paulo. Após corrigir a segmentação, geramos 167 conversas no WhatsApp em 36 dias, com R$852,97 investidos e custo médio de R$4,11 por conversa.</p>
+                <div class="curiosity-box">
+                    <strong><i class="fa-solid fa-crosshairs"></i> Curiosidade:</strong> Corrigir a segmentação geográfica foi o principal fator para elevar a eficiência das campanhas.
                 </div>
             </div>
         </div>
@@ -960,6 +367,11 @@
                     <div class="roi-number">100%</div>
                     <div class="roi-title">Profissionalismo</div>
                     <div class="roi-desc">Imagens, vídeos e artes de alta qualidade que geram autoridade e confiança imediata.</div>
+                </div>
+                <div class="roi-card">
+                    <div class="roi-number">R$3,09</div>
+                    <div class="roi-title">Custo por Conversa</div>
+                    <div class="roi-desc">Custo médio validado em campanhas reais de tráfego pago, com segmentação e otimização contínua.</div>
                 </div>
             </div>
         </div>
@@ -1018,11 +430,92 @@
         </div>
     </section>
 
+    <!-- Pricing Section -->
+    <section class="roi-section" id="pacotes">
+        <div class="section-header">
+            <div class="badge"><i class="fa-solid fa-layer-group"></i> Pacotes</div>
+            <h2 class="section-title">Encontre o pacote ideal para o seu momento</h2>
+            <p class="section-subtitle">Cada negócio tem uma necessidade diferente. Converse com a gente e monte uma proposta sob medida sem compromisso.</p>
+        </div>
+
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <div class="pricing-tag">Faísca</div>
+                <h3>Para quem está começando</h3>
+                <p>Presença digital organizada e consistente.</p>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> Presença Digital & Google Meu Negócio</li>
+                    <li><i class="fa-solid fa-check"></i> Gestão de redes sociais</li>
+                    <li><i class="fa-solid fa-check"></i> Cronograma estratégico de postagens</li>
+                </ul>
+                <a href="#" data-wa-msg="Olá! Quero saber mais sobre o pacote Faísca." target="_blank" class="pricing-cta">Solicitar Proposta</a>
+            </div>
+
+            <div class="pricing-card featured">
+                <div class="pricing-tag">Chama</div>
+                <h3>Para acelerar resultados</h3>
+                <p>O pacote mais completo para crescer com performance.</p>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> Tudo do pacote Faísca</li>
+                    <li><i class="fa-solid fa-check"></i> Tráfego pago (Meta & Google)</li>
+                    <li><i class="fa-solid fa-check"></i> Site de alta conversão</li>
+                    <li><i class="fa-solid fa-check"></i> Produção de conteúdo profissional</li>
+                </ul>
+                <a href="#" data-wa-msg="Olá! Quero saber mais sobre o pacote Chama." target="_blank" class="pricing-cta">Solicitar Proposta</a>
+            </div>
+
+            <div class="pricing-card">
+                <div class="pricing-tag">Fornalha</div>
+                <h3>Para operações maiores</h3>
+                <p>Ecossistema completo com automação e branding.</p>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> Tudo do pacote Chama</li>
+                    <li><i class="fa-solid fa-check"></i> Automação & chatbot no WhatsApp</li>
+                    <li><i class="fa-solid fa-check"></i> Materiais gráficos e branding completo</li>
+                    <li><i class="fa-solid fa-check"></i> Relatórios e consultoria dedicada</li>
+                </ul>
+                <a href="#" data-wa-msg="Olá! Quero saber mais sobre o pacote Fornalha." target="_blank" class="pricing-cta">Solicitar Proposta</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="roi-section" id="faq">
+        <div class="section-header">
+            <div class="badge"><i class="fa-solid fa-circle-question"></i> Dúvidas Frequentes</div>
+            <h2 class="section-title">Perguntas Frequentes</h2>
+            <p class="section-subtitle">Ainda com dúvidas? Fale com a gente pelo WhatsApp e converse direto com um especialista.</p>
+        </div>
+
+        <div class="faq-list">
+            <details class="faq-item">
+                <summary>Quanto tempo leva para ver os primeiros resultados?</summary>
+                <p>Varia conforme o segmento, o objetivo e o investimento em mídia. Na avaliação gratuita, analisamos seu cenário e definimos um plano com expectativas realistas.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Qual o investimento mínimo em anúncios?</summary>
+                <p>Não existe um valor fixo o investimento ideal depende do seu objetivo e mercado. Definimos essa faixa juntos, com base no diagnóstico inicial gratuito.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Preciso já ter site ou redes sociais estruturadas?</summary>
+                <p>Não. Trabalhamos tanto com marcas que estão começando do zero quanto com quem já tem presença digital e quer profissionalizar e escalar.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Vocês atendem apenas negócios de gastronomia?</summary>
+                <p>Não. Embora tenhamos um portfólio forte em gastronomia e delivery, também atendemos outros segmentos, como estética e entretenimento.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Como funciona o primeiro contato?</summary>
+                <p>Você agenda uma avaliação gratuita pelo WhatsApp, analisamos sua presença digital e apresentamos um plano de ação sob medida sem compromisso.</p>
+            </details>
+        </div>
+    </section>
+
     <!-- Call to Action Banner -->
     <div class="cta-banner">
         <h2>Pronto para acender as vendas do seu negócio?</h2>
         <p>Faça uma avaliação gratuita da sua presença digital com a nossa equipe especializada e receba um plano de ação sob medida.</p>
-        <a href="https://wa.me/5521984137342?text=Ol%C3%A1!%20Quero%20fazer%20uma%20avalia%C3%A7%C3%A3o%20gratuita%20e%20solicitar%20um%20or%C3%A7amento." target="_blank" class="btn-primary" style="font-size:1.1rem; padding: 1.2rem 2.5rem;">
+        <a href="#" data-wa-msg="Olá! Quero fazer uma avaliação gratuita e solicitar um orçamento." target="_blank" class="btn-primary" style="font-size:1.1rem; padding: 1.2rem 2.5rem;">
             <i class="fa-brands fa-whatsapp"></i> Falar com um Especialista Agora
         </a>
     </div>
@@ -1034,24 +527,26 @@
                 <i class="fa-solid fa-fire logo-icon"></i>
                 <div class="logo-text">
                     <span class="logo-title">CHAMA</span>
-                    <span class="logo-subtitle">Marketing e Coworking</span>
+                    <span class="logo-subtitle">Marketing Digital</span>
                 </div>
             </a>
 
             <div class="social-links">
-                <a href="https://instagram.com/chama.mkt" target="_blank" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://wa.me/5521984137342" target="_blank" class="social-icon"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://instagram.com/chama.mkt" target="_blank" class="social-icon" aria-label="Instagram da Chama MKT"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" data-wa-msg="" target="_blank" class="social-icon" aria-label="WhatsApp da Chama MKT"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
         </div>
         <div class="copyright">
-            &copy; 2026 Chama Marketing e Coworking. Todos os direitos reservados. | Whatsapp: (21) 97248-9746
+            &copy; 2026 Chama Marketing. Todos os direitos reservados. | WhatsApp: (21) 98413-7342
         </div>
     </footer>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/5521984137342?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento." class="whatsapp-float" target="_blank" title="Fale conosco no WhatsApp">
-        <i class="fa-brands fa-whatsapp"></i>
+    <a href="#" data-wa-msg="Olá! Vim pelo site e gostaria de fazer um orçamento." class="whatsapp-float" target="_blank" aria-label="Fale conosco no WhatsApp">
+        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
     </a>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
