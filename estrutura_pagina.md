@@ -32,7 +32,8 @@ A identidade visual reflete energia, modernidade, autoridade e profissionalismo:
 - **Conteúdo:** Fotos, vídeos, edição e adaptação (Feed, Reels e Stories).
 - **Design & Materiais Gráficos:** Peças digitais, materiais gráficos impressos e comunicação visual.
 - **Tráfego Pago:** Anúncios no Meta e Google com relatórios periódicos.
-- **Coworking & Espaço:** Estrutura completa para gravações e reuniões.
+- **Site:** Páginas de alta conversão para campanhas e lançamentos, com design responsivo.
+- **Automações & Chatbot:** Chatbots inteligentes e automação de atendimento no WhatsApp.
 
 ### 3.4. Seção "Cases de Sucesso"
 - **Restaurante Fantástico (`@fantasticorestaurante`):** Identidade visual de lançamento, 2 anos de GRS e um dos maiores crescimentos orgânicos do Brasil no primeiro trimestre.
@@ -57,8 +58,9 @@ Exibição em formato de badges responsivas das principais marcas atendidas:
 - *Rei do Mate*
 
 ### 3.6. ROI & Prova Social
-- Apresentação visual de ganhos de visibilidade (5x a 10x), conversão no delivery (+40%) e autoridade.
+- Apresentação visual de ganhos de visibilidade (5x a 10x), conversão no delivery (+40%) e autoridade (100% de profissionalismo).
+- Custo médio de R$3,09 por conversa no WhatsApp, validado em campanhas reais de tráfego pago (case Flor da Pele: R$1.018,16 investidos geraram 249 conversas em 50 dias; case Carlito Botecaria: R$852,97 investidos geraram 167 conversas em 36 dias, a R$4,11 por conversa).
 - Depoimentos com a experiência real de clientes atendidos.
 
 ### 3.7. Botão Flutuante do WhatsApp
-- Link pré-configurado diretamente para o telefone oficial **(21) 97248-9746**.
+- Link pré-configurado diretamente para o telefone oficial **(21) 98413-7342**.

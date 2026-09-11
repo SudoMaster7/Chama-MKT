@@ -4,6 +4,15 @@ document.querySelectorAll('[data-wa-msg]').forEach(function (el) {
     el.href = 'https://wa.me/' + WHATSAPP_NUMBER + (msg ? '?text=' + encodeURIComponent(msg) : '');
 });
 
+// Meta Pixel: rastreia clique nos CTAs de WhatsApp
+document.querySelectorAll('[data-wa-msg]').forEach(function (el) {
+    el.addEventListener('click', function () {
+        if (typeof fbq === 'function') {
+            fbq('trackCustom', 'WhatsAppClick');
+        }
+    });
+});
+
 // Mobile menu
 (function () {
     var hamburger = document.getElementById('hamburger');
